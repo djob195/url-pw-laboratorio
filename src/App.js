@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import HDR_Navigation from './components/headers/Navigation/HDR_Navigation';
+import Root from './components/Root';
+import Home from './components/Home';
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header><HDR_Navigation /></header>
-      </div>
+      <Router>
+          <Root>
+             <Route path="/home" component={Home} />
+          </Root>
+      </Router>
     );
   }
 }

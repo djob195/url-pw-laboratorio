@@ -7,8 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink } from 'reactstrap';
-import staticNavigation  from './HDR_Navigation.json';
-
+import staticNavigation  from './contents/Header.json';
 
 function GetNav(props) {
   return(
@@ -18,10 +17,10 @@ function GetNav(props) {
   );
 }
 
-class HDR_Navigation extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
-
+    
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
@@ -76,6 +75,7 @@ class HDR_Navigation extends React.Component {
                     {
                       return (<GetNav item={element}  key={index} />);
                     }
+                    return "";
                   })}
                 </Nav>
               </Collapse>
@@ -86,4 +86,4 @@ class HDR_Navigation extends React.Component {
   }
 }
 
-export default HDR_Navigation;
+export default Header;
