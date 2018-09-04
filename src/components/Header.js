@@ -5,14 +5,15 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink } from 'reactstrap';
+  NavItem } from 'reactstrap';
+import {NavLink} from 'react-router-dom';
+
 import staticNavigation  from './contents/Header.json';
 
 function GetNav(props) {
   return(
     <NavItem>
-      <NavLink href={props.item.Href}>{props.item.Title}</NavLink>
+      <NavLink to={props.item.Href} className="nav-link">{props.item.Title}</NavLink>
     </NavItem>
   );
 }
@@ -66,7 +67,7 @@ class Header extends React.Component {
           return (
           <div>
             <Navbar color="dark" dark expand="md">
-              <NavbarBrand href="/">{json.Title}</NavbarBrand>
+              <NavLink to="/" className="navbar-brand">{json.Title}</NavLink>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>

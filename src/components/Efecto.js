@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default class Home extends React.Component{
+export default class Efecto extends React.Component{
     render(){
         return(
             <div>
-                <h3>Home</h3>
+                <h3>Efecto</h3>
             </div>
         );
     }
