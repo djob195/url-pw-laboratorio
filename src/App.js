@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Home from './components/Home';
-import Error from './components/Error';
-import Header from './components/Header'
-import Efecto from './components/Efecto'
+import Home from './components/js/Home';
+import Error from './components/js/Error';
+import Header from './components/js/Header';
+import Efecto from './components/js/Efecto';
 
 
 class App extends Component {

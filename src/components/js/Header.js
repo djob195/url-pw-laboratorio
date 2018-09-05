@@ -3,12 +3,11 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
 
-import staticNavigation  from './contents/Header.json';
+import staticNavigation  from '../contents/Header.json';
 
 function GetNav(props) {
   return(
